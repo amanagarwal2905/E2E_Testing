@@ -18,9 +18,9 @@ CONTENTS OF THIS FILE
 ********************************************************************
 Introduction:
 
-•	Film Details project can be used to find the details of the film either from the IMDB or the WIKIPEDIA page. We have used it to find out the "Release Date" and "Country" of the movie.
-•	Currently with the help of selenium framework with Java its fetching the details of "Pushpa : The Rise" movie. The code is generalised and provides the user to change the movie name through the properties file.
-•	After fetching the details, the code is validating the details from the 2 urls.
+•Film Details project can be used to find the details of the film either from the IMDB or the WIKIPEDIA page. We have used it to find out the "Release Date" and "Country" of the movie.
+•Currently with the help of selenium framework with Java its fetching the details of "Pushpa : The Rise" movie. The code is generalised and provides the user to change the movie name through the properties file.
+•After fetching the details, the code is validating the details from the 2 urls.
 
 ******************************************************************
 Pre-requisites:
@@ -47,6 +47,7 @@ Approach :-
 	   
 ***********************************************************
 -------------------- Steps to Execute ------------------------
+
 Execute --  testng.xml --> Right click --> Run as TestNG suite 
 Execute --  MovieDetails.xml --> Right click --> Run as TestNG suite
 Execute --  IMDB_Page.java --> Right click --> Run as JUnit Test
