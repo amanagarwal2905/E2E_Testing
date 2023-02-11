@@ -28,7 +28,7 @@ public class WIKI_Page {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
 		
-		Thread.sleep(10);
+		
 		// ****Launching the IMDB page *****
 		driver.get(properties.getproperties("wikiurl"));
 		driver.manage().window().maximize();
