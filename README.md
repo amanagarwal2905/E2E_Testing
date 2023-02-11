@@ -20,7 +20,7 @@ Introduction:
 
 •Film Details project can be used to find the details of the film either from the IMDB or the WIKIPEDIA page. We have used it to find out the "Release Date" and "Country" of the movie.
 •Currently with the help of selenium framework with Java its fetching the details of "Pushpa : The Rise" movie. The code is generalised and provides the user to change the movie name through the properties file.
-•After fetching the details, the code is validating the details from the 2 urls.
+•After fetching the details, the code is validating the details from the IMDB (https://www.imdb.com/) and WIKIPedia page (https://en.wikipedia.org/).
 
 ******************************************************************
 Pre-requisites:
@@ -58,7 +58,9 @@ Execution :-
 
 1. Code will open the required url in the chrome browser.
 2. Search for the required movie.
-3. Mouse hover to Details tab, and fetch the movie details and then close the browser.
+3. Mouse hover to Details tab, and fetch the movie details
+4. Comparing the details from the different browsers.
+5. Close the browser.
 
 ***************************************************************   
 Folder Structure :-
