@@ -11,6 +11,7 @@ CONTENTS OF THIS FILE
  * Approach
  * Procedure for accessing
  * Steps to exceute
+ * Configured Properties
  * Execution
  * Folder Structure
 
@@ -18,9 +19,10 @@ CONTENTS OF THIS FILE
 ********************************************************************
 Introduction:
 
-•Film Details project can be used to find the details of the film either from the IMDB or the WIKIPEDIA page. We have used it to find out the "Release Date" and "Country" of the movie.
-•Currently with the help of selenium framework with Java its fetching the details of "Pushpa : The Rise" movie. The code is generalised and provides the user to change the movie name through the properties file.
-•After fetching the details, the code is validating the details from the IMDB (https://www.imdb.com/) and WIKIPedia page (https://en.wikipedia.org/).
+• Film Details project can be used to find the details of the movie either from the IMDB or the WIKIPEDIA page. We have used it to find out the "Release Date" and "Country" of the "Pushpa : The Rise" movie.
+• Currently with the help of selenium framework with Java and TestNG its fetching and asserting the details from the IMDB (https://www.imdb.com/) and WIKIPedia page (https://en.wikipedia.org/).
+• The code allows the user to provide the browser and for which movie it needs to fetch the details through the properties file.
+• After fetching the details, its capturing the screenshot and prints the details in an output file.
 
 ******************************************************************
 Pre-requisites:
@@ -54,13 +56,24 @@ Execute --  IMDB_Page.java --> Right click --> Run as JUnit Test
 Execute --  WIKI_Page.java --> Right click --> Run as JUnit Test
 
 ****************************************************************** 
+Configured Properties:
+
+1. browser = Chrome
+2. imdbUrl = https://www.imdb.com/
+3. wikiUrl = https://en.wikipedia.org/
+4. movie =  Pushpa: The Rise
+
+****************************************************************** 
+
 Execution :-
 
 1. Code will open the required url in the chrome browser.
-2. Search for the required movie.
-3. Mouse hover to Details tab, and fetch the movie details
-4. Comparing the details from the different browsers.
-5. Close the browser.
+2. Search for the "Pushpa: The Rise" movie.
+3. Mouse hover to Details tab, and fetch the movie details.
+4. Capture the page screenshot as a testexecution evidence.
+5. Genereate a output file with the movie details (i.e Releasedate, Country)
+6. Compare the details from the different browsers.
+7. Close the browser.
 
 ***************************************************************   
 Folder Structure :-
@@ -82,16 +95,24 @@ FilmDetails[PRO]
       testNGPackage [P]
           MovieDetails [C] --------> TestNg class
       Utility [P]
+      	  Driver.java [C]
           FormatDate.java [C]
           Listeners.java [C]
           properties [C]
-          Utils.java [C]
+	  Screenshot.java [C]
+          Utils.java [C]  
     src/test/java [F]
+    Outputdata [F]
+          IMDBPAGE.properties [f]
+	  WIKIPAGE.properties [f]
+    Screenshot [F]
+    	imdbPageScreenshot.png
+	wikiPageScreenshot.png
     test-output [F]
       Default Suite
           Default test.html
           Default test.xml
    pom.xml [x]
-   testdata.properties [F] -------> Input data
+   testdata.properties [f] -------> Input data
    testng.xml [x] --------> TestNG Main Runner file
   
