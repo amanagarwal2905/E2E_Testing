@@ -2,6 +2,7 @@ package Utility;
 
 public class FormatDate {
 	public static String formatDate(String releasedate) {
+		
 		String array[] = releasedate.split(" ");
 		String date = "";
 		for(String a: array) {

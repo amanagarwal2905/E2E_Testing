@@ -2,6 +2,7 @@ package Utility;
 import org.openqa.selenium.By;
 
 public class Utils {
+	
 	// **** WIKI Page WebElements *****
 	public static final By wiki_searchTxt = By.xpath("//input[@type='search']");
 	public static final By wiki_resultSearch = By.xpath("//div[@class='cdx-search-input__input-wrapper']/div[2]/ul/li");
